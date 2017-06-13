@@ -8,6 +8,9 @@
 # {"id":{"s":"AMD"},"description":{"s":"AMD"}}
 
 
+# TODO - make even more generic by reading header line in from CSV and looping through each column.
+
+
 import csv
 
 filename = 'data.csv'
