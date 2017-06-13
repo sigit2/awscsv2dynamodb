@@ -1,6 +1,6 @@
 #CSV import format
-#   AAPL, Apple
-
+# AAPL, Apple
+# AMD, AMD
 
 # Format for DynamoDB
 # {"id":{"s":"AAPL"},"description":{"s":"Apple"}}
@@ -17,7 +17,7 @@ with open(filename) as csvfile:
 
         outputfile = open(outputfilename, 'w')
 
-
         for line in reader:
                 print (line)
                 outputfile.write("{\"id\":{\"s\":\"" + line[0] + "\"},\"description\":{\"s\":\""+ line[1] + "\"}}" +  "\n")
+				
