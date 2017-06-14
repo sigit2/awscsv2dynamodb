@@ -16,8 +16,8 @@ import csv
 filename = 'data.csv'
 outputfilename = 'dynamodbimport'
 
-def formatStr(name, type, value):
-        return "\"" + name + "\":{\"" + type + "\":\"" + value + "\"}"
+def formatStr(name, vtype, value):
+        return "\"" + name + "\":{\"" + vtype + "\":\"" + value + "\"}"
 
 
 with open(filename) as csvfile:
