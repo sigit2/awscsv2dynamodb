@@ -8,8 +8,6 @@
 # {"id":{"s":"AMD"},"description":{"s":"AMD"}}
 
 
-# TODO - make even more generic by reading header line in from CSV and looping through each column.
-
 
 import csv
 
@@ -22,7 +20,15 @@ def formatStr(name, vtype, value):
 
 with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
-        outputfile = open(outputfilename, 'w')
+        headers = next(reader)
+        print(headers)
 
+        outputfile = open(outputfilename, 'w')
+        loop = 0
         for line in reader:
-                outputfile.write("{" + formatStr("id", "s", line[0]) + "," + formatStr("description","s", line[1]) +"}" +  "\n")
+                outline = "{"
+                for header in headers:
+                        print(header)
+                        print(line)
+                loop = loop + 1
+                #outputfile.write("{" + formatStr("id", "s", line[0]) + "," + formatStr("description","s", line[1]) +"}" +  "\n")
